@@ -7,14 +7,13 @@
 
 ## swapper models
 
-- Inswapper
+- ### Inswapper
 - https://github.com/facefusion/facefusion-assets/releases/download/models/arcface_w600k_r50.onnx
 - ``Swap-Mukham/assets/pretrained_models/swapper/arcface_w600k_r50.onnx``
 - https://github.com/facefusion/facefusion-assets/releases/download/models/inswapper_128.onnx
 - ``Swap-Mukham/assets/pretrained_models/swapper/inswapper_128.onnx``
 
-
-- Simswap (optional)
+- ### Simswap (optional)
 - https://github.com/harisreedhar/Face-Swappers-ONNX/releases/download/simswap/simswap_arcface_backbone.onnx
 - ``Swap-Mukham/assets/pretrained_models/swapper/simswap_arcface_backbone.onnx``
 - https://github.com/harisreedhar/Face-Swappers-ONNX/releases/download/simswap/simswap.onnx
@@ -22,8 +21,7 @@
 - https://github.com/harisreedhar/Face-Swappers-ONNX/releases/download/simswap/simswap_512_beta.onnx
 - ``Swap-Mukham/assets/pretrained_models/swapper/simswap_512_beta.onnx``
 
-
-- Ghost (optional)
+- ### Ghost (optional)
 - https://github.com/harisreedhar/Face-Swappers-ONNX/releases/download/ghost/ghost_arcface_backbone.onnx
 - ``Swap-Mukham/assets/pretrained_models/swapper/ghost_arcface_backbone.onnx``
 - https://github.com/harisreedhar/Face-Swappers-ONNX/releases/download/ghost/ghost_unet_1_block.onnx
@@ -36,18 +34,25 @@
 
 ## upscaler models
 
+- ### GFPGAN
 - https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GFPGANv1.4.onnx
 - ``Swap-Mukham/assets/pretrained_models/upscaler/GFPGANv1.4.onnx``
 - https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GFPGANv1.3.onnx
 - ``Swap-Mukham/assets/pretrained_models/upscaler/GFPGANv1.3.onnx``
 - https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GFPGANv1.2.onnx
 - ``Swap-Mukham/assets/pretrained_models/upscaler/GFPGANv1.2.onnx``
+
+- ### GPEN
 - https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GPEN-BFR-512.onnx
 - ``Swap-Mukham/assets/pretrained_models/upscaler/GPEN-BFR-512.onnx``
 - https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GPEN-BFR-256.onnx
 - ``Swap-Mukham/assets/pretrained_models/upscaler/GPEN-BFR-256.onnx``
+
+- ### Codeformer
 - https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/codeformer.onnx
 - ``Swap-Mukham/assets/pretrained_models/upscaler/codeformer.onnx``
+
+- ### Restoreformer
 - https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/restoreformer.onnx
 - ``Swap-Mukham/assets/pretrained_models/upscaler/restoreformer.onnx``
 
@@ -60,11 +65,4 @@
 - ``Swap-Mukham/assets/pretrained_models/mask/occluder.onnx``
 
 
-
-- see ``Swap-Mukham/swap_mukham/default_paths.py`` file for verifying model paths.
-
-
-
-
-
-
+see `Swap-Mukham/swap_mukham/default_paths.py` file for verifying model paths.
