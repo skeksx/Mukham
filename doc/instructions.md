@@ -6,7 +6,7 @@ more device support can be added through `Swap-Mukham/swap_mukham/utils/devie.py
 
 ## Download models
 
-- see `Swap-Mukham/doc/download_models.md`
+- see [`Swap-Mukham/doc/download_models.md`](https://github.com/harisreedhar/Swap-Mukham/blob/main/doc/download_models.md)
 
 ## Running on cpu
 
