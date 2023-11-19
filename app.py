@@ -1,4 +1,4 @@
-import torch # not necessary if cuda is properly configured
+# import torch
 
 import os
 import sys

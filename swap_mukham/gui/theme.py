@@ -23,5 +23,5 @@ theme = {
 }
 
 intro = """
-<h1>🗿 <a href="https://github.com/harisreedhar/Swap-Mukham" style="text-decoration: none; color:#AAAAAA;">SWAP MUKHAM</h1> 0.3 alpha</a>
+<h1>🗿 <a href="https://github.com/harisreedhar/Swap-Mukham" style="text-decoration: none; color:#AAAAAA;">SWAP MUKHAM</h1></a>
 """

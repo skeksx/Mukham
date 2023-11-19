@@ -1,63 +1,49 @@
-# Swap-Mukham WIP
+# Swap-Mukham
 
-## Changes
-- added parellel execution utilizing concurrent.futures
-- added test preview button
-- added video frame slider
-- added collect face from preview
-- added frame selection to replace trim feature
-- converted every model to onnx format
-- editable onnx execution providers at ``utils/device``
-- removed moviepy, insightface dependency
-- removed pytorch dependency for cpu users
-- command line arg ``--prefer_text_widget`` to replace target video widget with text
-- more face-upscaler support (restoreformer, codeformer, gfpgan, gpen)
-- added face-upscaler opacity slider
-- nsfw-detector now only checks random 100 frames
-- added custom foreground painting
-- ui changes (gradio 3.40)
-- added swap-iteration (may increase face likeliness)
-- added date-time option for output name
-- allow multiple source images (embeddings average)
-- use different model for gender & age detection
+A simple face swapping tool with gradio ui.
 
+## Disclaimer
 
-## Install WIP branch
-### CPU Install
-````
-git clone -b new-wip --single-branch https://github.com/harisreedhar/Swap-Mukham.git
-cd Swap-Mukham
-conda create -n swapmukham python=3.10 -y
-conda activate swapmukham
-pip install -r requirements_cpu.txt
+We want to underscore that our software is intended for responsible and ethical use exclusively. It is imperative to recognize that users bear full responsibility for their actions while utilizing our software.
 
-python app.py --cpu --prefer_text_widget
-````
-### GPU Install (CUDA)
-````
-git clone -b new-wip --single-branch https://github.com/harisreedhar/Swap-Mukham.git
-cd Swap-Mukham
-conda create -n swapmukham python=3.10 -y
-conda activate swapmukham
-conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.8 -c pytorch -c nvidia
-pip install -r requirements.txt
+1. Intended Usage:
+   Our software is crafted to aid users in crafting realistic and engaging content, spanning movies, visual effects, virtual reality experiences, and other creative applications. We urge users to explore these possibilities within the bounds of legality, ethical considerations, and respect for others' privacy.
 
-python app.py --prefer_text_widget
-````
+2. Ethical Guidelines:
+   Users are expected to uphold a set of ethical guidelines when using our software. These guidelines encompass, but are not limited to:
 
-## Download and place these models under ``assets/pretrained_models``
+- Refraining from creating or disseminating content that could harm, defame, or harass individuals.
+- Securing proper consent and permissions from individuals featured in the content before utilizing their likeness.
+- Steering clear of using technology for deceptive purposes, including misinformation or malicious intent.
+- Adhering to applicable laws, regulations, and copyright restrictions.
 
-- [inswapper_128.onnx](https://huggingface.co/deepinsight/inswapper/resolve/main/inswapper_128.onnx)
-- [faceparser.onnx](https://huggingface.co/bluefoxcreation/Face_parsing_onnx/resolve/main/faceparser.onnx)
-- [det_10g.onnx](https://huggingface.co/bluefoxcreation/insightface-retinaface-arcface-model/resolve/main/det_10g.onnx)
-- [w600k_r50.onnx](https://huggingface.co/bluefoxcreation/insightface-retinaface-arcface-model/resolve/main/w600k_r50.onnx)
-- [gender_age.onnx](https://huggingface.co/bluefoxcreation/gender_age/resolve/main/gender_age.onnx)
+3. Privacy and Consent:
+   Users are responsible for ensuring that they have the necessary permissions and consents from individuals whose likeness they intend to use in their creations. We strongly discourage the creation of content without explicit consent, especially if it involves non-consensual or private content. It is essential to respect the privacy and dignity of all individuals involved.
 
-#### Face upscalers ``optional``
-- [codeformer.onnx](https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/codeformer.onnx)
-- [GFPGANv1.2.onnx](https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GFPGANv1.2.onnx)
-- [GFPGANv1.3.onnx](https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GFPGANv1.3.onnx)
-- [GFPGANv1.4.onnx](https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GFPGANv1.4.onnx)
-- [GPEN-BFR-256.onnx](https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GPEN-BFR-256.onnx)
-- [GPEN-BFR-512.onnx](https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/GPEN-BFR-512.onnx)
-- [restoreformer.onnx](https://github.com/harisreedhar/Face-Upscalers-ONNX/releases/download/Models/restoreformer.onnx)
+4. Legal Considerations:
+   Users must comprehend and adhere to all pertinent local, regional, and international laws related to our technology. This encompasses laws concerning privacy, defamation, intellectual property rights, and other relevant legislation. Users should seek legal counsel if uncertainties arise regarding the legal implications of their creations.
+
+5. Liability and Responsibility:
+   As the creators and providers of the software, we cannot be held responsible for the actions or consequences resulting from its usage. Users assume full liability and responsibility for any misuse, unintended effects, or abusive behavior associated with the content they create.
+
+By using our software, users acknowledge that they have read, understood, and agreed to abide by the above guidelines and disclaimers. We strongly encourage users to approach technology with caution, integrity, and respect for the well-being and rights of others.
+
+Remember, technology should be used to empower and inspire, not to harm or deceive. Let's strive for ethical and responsible use of technology for the betterment of society.
+
+## Acknowledgements
+
+- [Insightface](https://github.com/deepinsight)
+- [Ffmpeg](https://ffmpeg.org/)
+- [Gradio](https://gradio.app/)
+- [Wav2lip HQ](https://github.com/Markfryazino/wav2lip-hq)
+- [Face Parsing](https://github.com/zllrunning/face-parsing.PyTorch)
+- [Open-NSFW](https://github.com/yahoo/open_nsfw)
+- [Codeformer](https://github.com/sczhou/CodeFormer)
+- [GPEN](https://github.com/yangxy/GPEN)
+- [GFPGAN](https://github.com/TencentARC/GFPGAN)
+- [Restoreformer](https://github.com/wzhouxiff/RestoreFormer)
+- [Real-ESRGAN (ai-forever)](https://github.com/ai-forever/Real-ESRGAN)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
