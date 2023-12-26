@@ -1,6 +1,6 @@
 ## Installation
 
-create conda or venv python environment with `Swap-Mukham/requirement_xxxx.txt`.
+create conda or venv python environment with `Swap-Mukham/requirement.txt`.
 currently cpu and cuda are supported.
 more device support can be added through `Swap-Mukham/swap_mukham/utils/devie.py`.
 
@@ -19,4 +19,4 @@ more device support can be added through `Swap-Mukham/swap_mukham/utils/devie.py
 ## Note
 
 - remove `--local` cli argument to use default image & video components.
-- if `cuda` is not detected install pytorch and uncomment first line of `Swap-Mukham/app.py`
+- if `cuda` is not detected install pytorch 
