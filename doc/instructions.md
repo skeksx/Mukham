@@ -1,6 +1,6 @@
 ## Installation
 
-create conda or venv python environment with `Swap-Mukham/requirement.txt`.
+create conda or venv python environment with `Swap-Mukham/requirements.txt`.
 currently cpu and cuda are supported.
 more device support can be added through `Swap-Mukham/swap_mukham/utils/devie.py`.
 
