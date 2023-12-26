@@ -4,7 +4,7 @@ import os
 ffmpeg_binary_path = "./assets/ffmpeg/ffmpeg"
 FFMPEG_PATH = ffmpeg_binary_path if os.path.exists(ffmpeg_binary_path) else "ffmpeg"
 
-RETINAFACE_PATH = "./assets/pretrained_models/retinaface_10g.onnx.onnx"
+RETINAFACE_PATH = "./assets/pretrained_models/retinaface_10g.onnx"
 DETECTOR_PATH = "./assets/pretrained_models/det.onnx"
 GENDERAGE_PATH = "./assets/pretrained_models/gender_age.onnx"
 
