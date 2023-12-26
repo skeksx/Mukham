@@ -1,5 +1,4 @@
-# import torch
-
+import torch # can delete if your stuff is set up correctly
 import os
 import sys
 import cv2
@@ -117,7 +116,7 @@ with gr.Blocks(css=gui.theme.css, theme=gr.themes.Default(**gui.theme.theme)) as
 
     def process_frame(frame_path):
         if not gv.CANCEL_SIGNAL:
-            frame = cv2.imread(frame_path, cv2.IMREAD_UNCHANGED)
+            frame = cv2.imread(frame_path)
             output = SM.process_frame(frame, None)[0]
             cv2.imwrite(frame_path, output)
 
