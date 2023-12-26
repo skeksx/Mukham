@@ -1,7 +1,8 @@
 gradio==3.46
 numpy>=1.25.2
 onnx==1.14.0
-onnxruntime-gpu==1.15.0
+onnxruntime-gpu==1.15.0 # gpu needs this
+onnxruntime==1.15.0 # cpu needs this
 opencv-python>=4.7.0.72
 opencv-python-headless>=4.7.0.72
 plyer==2.1.0
