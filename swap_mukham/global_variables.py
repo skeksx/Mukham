@@ -164,15 +164,15 @@ OUTPUT_DEFAULTS = OrderedDict([
     ('output_name', 'Result'),
     ('use_datetime_suffix', True),
 
-    ('extract_format', "jpg"),
-    ('extract_quality', 95),
+    ('extract_format', "png"),
+    ('extract_quality', 100),
     ('keep_extracted_sequence', False),
 
     ('video_container', ".mp4"),
     ('video_fps', "Original"),
     ('video_resolution', 'Original'),
 
-    ('video_quality', 90),
+    ('video_quality', 100),
     ('video_codec', 'libx264'),
     ('merge_audio', True)
 
