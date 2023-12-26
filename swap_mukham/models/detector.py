@@ -57,7 +57,6 @@ class Detector(OnnxInferenceSession):
             frame = cv2.imread(image_paths[idx])
             img = prepare_image(frame)
             score = self.session.run(None, {self.input_name: img})[0][0][1]
-            assert score >= threshold
             if score >= threshold:
                 return False
         return True
